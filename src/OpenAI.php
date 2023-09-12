@@ -18,7 +18,9 @@ final class OpenAI
     {
         $apiKey = ApiKey::from($apiKey);
 
-        $baseUri = BaseUri::from('api.openai.com/v1');
+//        $baseUri = BaseUri::from('api.openai.com/v1');
+
+        $baseUri = BaseUri::from(config('openai.uri'));
 
         $headers = Headers::withAuthorization($apiKey);
 
